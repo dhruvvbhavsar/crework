@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Modal from "./Modal";
+import profile from "@/public/profilex.jpeg";
 import {
   AnalyticsIcon,
   BellDotIcon,
@@ -16,24 +17,29 @@ import {
 import { useAuth } from "@/lib/context";
 import { useRouter } from "next/navigation";
 import { useRequireAuth } from "@/hooks/useRequiredAuth";
+import Image from "next/image";
 
 const Sidebar: React.FC = () => {
   const router = useRouter();
   const isAuthenticated = useRequireAuth();
   const { user, logout } = useAuth();
   if (!isAuthenticated) {
-    router.push('/auth/login');
+    router.push("/auth/login");
   }
   return (
     <aside className="w-64 bg-white pt-6 pb-8 px-4 flex flex-col h-screen border-r border-gray-200">
       <div className="flex items-center mb-2">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://s3-alpha-sig.figma.com/img/71f6/04d7/50a4101f6f29ecef74a38e0f7ae7513c?Expires=1723420800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VM3VVa9PGHndk4Xx3cTIkxtNw3EGNszsbcm1ft0qvPP9wA2WChraKVPXcMXvm23nSFji19Xg7Gl6o83tfLxLjNC9MCB0voT53dCvZ78AhIXkLsc9BLFqD4adx3723o54O5N5F0ZiOa7hy5n7H22jpi~kvFx2L6kg7y4KoLZGOR7XGghLNW7EiNAtn~nM4yc68cIHN1P1assk3lJlC5ZfSr4d7Nw4bGZTxUMuMqbnquOKp9vBhjvt55OuGVrzYprtQYdB57zKPmzw0bXPMiqPOy-sBaN-oVcDg95Nha6~twTziQrvgrdkfK1yXCL7S8t1wKOQyUaoYx~LfDOK22WVpQ"
-          alt="Joe Gardner"
+        <Image
+          src={profile.src}
+          alt="Landscape picture"
           className="size-8 rounded-lg mr-2 object-cover"
+          width={32}
+          height={32}
         />
-        <h2 className="font-medium text-[#080808]">{user?.name || "Joe Gardener"}</h2>
+
+        <h2 className="font-medium text-[#080808]">
+          {user?.name || "Joe Gardener"}
+        </h2>
       </div>
       <div className="text-[#666666] flex items-center justify-between">
         <div className="flex gap-3">
@@ -41,7 +47,10 @@ const Sidebar: React.FC = () => {
           <LoaderDotIcon className="h-6 w-5" />
           <RightArrows className="h-6 w-5" />
         </div>
-        <button onClick={logout} className="bg-[#F4F4F4] rounded p-2 text-[#797979] text-base">
+        <button
+          onClick={logout}
+          className="bg-[#F4F4F4] rounded p-2 text-[#797979] text-base"
+        >
           Log Out
         </button>
       </div>

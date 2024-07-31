@@ -36,20 +36,6 @@ const Login: React.FC = () => {
     }
   };
 
-  const handleKeyPress = (event: any) => {
-    if (event.key === 'Enter') {
-      handleSubmit(event);
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleKeyPress);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, []);
-
   return (
     <AuthLayout title="Welcome to">
       <form className="flex flex-col gap-6" onSubmit={handleSubmit}>

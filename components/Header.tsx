@@ -18,7 +18,7 @@ const Header: React.FC = () => {
   return (
     <header className="mb-8">
       <div className="flex items-center justify-between mb-6">
-        <h1 className={`${barlow.className} + text-5xl font-semibold`}>
+        <h1 className={`${barlow.className} text-5xl font-semibold`}>
           Good morning, {user.name.split(" ")[0]}!
         </h1>
         <div className="flex items-center gap-2">

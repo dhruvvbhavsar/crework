@@ -117,7 +117,7 @@ const TaskManagementUI: React.FC = () => {
 
   return (
     <Suspense fallback={<p>loading....</p>}>
-      <div className={`${barlow.className} bg-[#F7F7F7] h-screen flex`}>
+      <div className={` bg-[#F7F7F7] h-screen flex`}>
         <Sidebar />
         <main className="flex-1 p-6 overflow-auto">
           <Header />
