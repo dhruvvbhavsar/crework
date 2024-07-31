@@ -83,7 +83,8 @@ export const useAuth = () => {
 
 I have tried my best to match the design pixel to pixel for both the auth and dashboard pages.
 
-[Insert 2 pictures here]
+![auth](https://github.com/dhruvvbhavsar/crework/blob/main/public/auth.png?raw=true)
+![dashboard](https://github.com/dhruvvbhavsar/crework/blob/main/public/dashboard.png?raw=true)
 
 ### 3. Drag n Drop
 
@@ -101,7 +102,7 @@ As the name suggests, but no! It's a sheet/drawer that opens up from the right s
 
 I have tried to match it pixel to pixel with the design. Also, I have added a `Save` button when the user wants to save the task. A handy addon from my side.
 
-[Insert picture]
+![modal](https://github.com/dhruvvbhavsar/crework/blob/main/public/modal.png?raw=true)
 
 ### 5. Data Persistence
 
