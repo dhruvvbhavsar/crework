@@ -4,6 +4,8 @@ I'm really passionate about frontend technologies like React and Next.js. I also
 
 Enough about me. Let's dive into the project details!
 
+[link to backend](https://github.com/dhruvvbhavsar/crework-backend)
+
 ## Stack Used
 
 ### Frontend
